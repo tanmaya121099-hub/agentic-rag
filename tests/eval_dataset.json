@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What is Retrieval-Augmented Generation?",
+    "ground_truth": "Retrieval-Augmented Generation (RAG) is a technique that combines a retrieval system with a language model. The retrieval system fetches relevant documents from a knowledge base, and the language model uses those documents as context to generate accurate, grounded answers."
+  },
+  {
+    "question": "What is the difference between vector search and BM25?",
+    "ground_truth": "Vector search uses dense embeddings to find semantically similar documents, capturing meaning even when exact words differ. BM25 is a sparse keyword-based ranking function that scores documents by term frequency and inverse document frequency, excelling at exact-match queries."
+  },
+  {
+    "question": "Why use LangGraph instead of autonomous agents?",
+    "ground_truth": "LangGraph enforces a deterministic state machine, preventing infinite loops and unpredictable behavior common in autonomous agents. It provides explicit control over agent routing and execution flow, which is critical for production reliability."
+  }
+]

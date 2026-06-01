@@ -10,5 +10,25 @@
   {
     "question": "Why use LangGraph instead of autonomous agents?",
     "ground_truth": "LangGraph enforces a deterministic state machine, preventing infinite loops and unpredictable behavior common in autonomous agents. It provides explicit control over agent routing and execution flow, which is critical for production reliability."
+  },
+  {
+    "question": "What is RRF and why is it used in hybrid search?",
+    "ground_truth": "Reciprocal Rank Fusion (RRF) is a rank aggregation method that combines results from multiple retrieval systems by summing the reciprocal ranks of each document. It is used in hybrid search to merge BM25 and vector search results without requiring score normalization across different scoring scales."
+  },
+  {
+    "question": "What is cross-encoder reranking?",
+    "ground_truth": "Cross-encoder reranking uses a model that takes a query and a document together as input and outputs a relevance score. Unlike bi-encoders, cross-encoders consider the full interaction between query and document, producing more accurate relevance scores at the cost of higher latency."
+  },
+  {
+    "question": "How does confidence scoring reduce hallucination in RAG?",
+    "ground_truth": "Confidence scoring evaluates retrieved chunks across multiple dimensions such as freshness, trust score, semantic overlap, and consistency. When the aggregate confidence falls below a threshold, the system refuses to generate an answer and returns an insufficient evidence response instead of hallucinating."
+  },
+  {
+    "question": "What is the purpose of a query rewriter in a RAG pipeline?",
+    "ground_truth": "A query rewriter rephrases an ambiguous or poorly-performing query to improve retrieval recall. When the initial retrieval returns irrelevant chunks, the rewriter generates an alternative formulation of the query before retrying, up to a configured maximum number of attempts."
+  },
+  {
+    "question": "When should a RAG system fall back to web search?",
+    "ground_truth": "A RAG system should fall back to web search when the local document corpus does not contain sufficient relevant information. This typically occurs after the query rewriter has exhausted its retry limit and the grader still marks retrieved chunks as irrelevant."
   }
 ]

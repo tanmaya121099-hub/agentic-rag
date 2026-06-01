@@ -15,3 +15,5 @@ htmlcov/
 *.log
 *.db
 chroma_db/
+LEARNING.md
+CLAUDE.md
